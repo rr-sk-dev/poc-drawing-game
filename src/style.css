@@ -1,5 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+  --header-default-height: 8%;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  --bgColor: #fff;
+  --darkGrey: #242424;
+  --primary: #009578;
+  --secondary: #845695;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(76, 90, 212);
+  color: white;
+}
+
+header {
+  position: relative;
+  height: var(--header-default-height);
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+}
+
+.actions {
+  position: absolute;
+  right: 0.7em;
+  cursor: pointer;
+}
+
+main {
+  height: calc(100% - var(--header-default-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+}
+
+section.flex-row {
+  height: 100%;
+}
+
+.word {
+  padding: 0.5em;
+}
+
+canvas {
+  cursor: pointer;
+}
+
+.tools {
+  display: flex;
+  padding: 0.3em;
+  height: 5em;
+}
+
+.clear-actions {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.color-field {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.draw-settings {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.players,
+.chat {
+  padding: 0.5em 0.5em;
+}
+
+.players {
+  width: 40%;
+  border: 2px solid black;
+}
+
+.chat {
+  width: 60%;
+  border: 2px solid black;
+}
+
+.color-picker {
+  display: none;
+}
+
+.color {
+  height: 1em;
+  width: 1em;
+  margin: 0 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pen-range {
+  cursor: pointer;
+  width: 70%;
+}
+
+/* .tools .color-field {
+  height: 5px;
+  width: 5px;
+  min-height: 5px;
+  min-width: 5px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 2px;
+}
+
+.tools .btn {
+  width: 10px;
+  height: 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+  background-color: #222;
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+.color-picker {
+  margin: 0 2px;
+  height: 20px;
+  cursor: pointer;
+}
+
+ */
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+@media only screen and (max-width: 320px) {
+  header {
+    background-color: background-color: rgb(76, 90, 212);
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  header {
+    background-color: green;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    background-color: orange;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  header {
+    background-color: yellow;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  header {
+    background-color: brown;
+  }
 }
