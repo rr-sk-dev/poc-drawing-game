@@ -4,10 +4,63 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/ee914c97d9.js" crossorigin="anonymous"></script>
     <title>Vite + TS</title>
   </head>
   <body>
-    <p>Work in progress ... 🚧</p>
+    <header>
+      <div class="title">
+        <h1>Skribbl - v1</h1>
+      </div>
+      <div class="actions">
+        <span class="icon">
+          <i class="fa-solid fa-gear icon"></i>
+        </span>
+      </div>
+    </header>
+    <main>
+      <section class="flex-column word">
+        <span>the word stays here</span>
+      </section>
+      <section class="flex-column">
+        <canvas id="canvas"></canvas>
+      </section>
+      <section class="tools">
+        <div class="clear-actions">
+          <span class="icon">
+            <i class="fa-solid fa-rotate-left"></i>
+          </span>
+          <span class="icon">
+            <!-- <i class="fa-solid fa-xmark"></i> -->
+            <i class="fa-solid fa-trash"></i>
+          </span>
+        </div>
+        <div class="flex-row color-field">
+          <div class="color red"></div>
+          <div class="color blue"></div>
+          <div class="color green"></div>
+          <div class="color yellow"></div>
+          <!-- <input type="color" class="color-picker" id="color-picker" /> -->
+          <label for="color-picker">
+            <i class="fa fa-palette icon"></i>
+            <input type="color" id="color-picker" class="color-picker" />
+          </label>
+        </div>
+
+        <div class="draw-settings">
+          <input type="range" min="1" max="100" class="pen-range" />
+        </div>
+      </section>
+      <section class="flex-row social">
+        <div class="players">players</div>
+        <div class="chat">chat</div>
+      </section>
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
+
+<!-- <i class="fa-solid fa-pen"></i> -->
+<!-- <i class="fa-solid fa-paint-roller"></i> -->
+<!-- <i class="fa-solid fa-palette"></i> -->
