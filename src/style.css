@@ -88,7 +88,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.3em;
+  gap: 0.5em;
 }
 
 .icon {
@@ -126,7 +126,8 @@ canvas {
 }
 
 .color-picker {
-  display: none;
+  /* display: none; */
+  width: 30px;
 }
 
 .color {
@@ -137,7 +138,7 @@ canvas {
   cursor: pointer;
 }
 
-.pen-range {
+input[type="range"] {
   cursor: pointer;
   width: 70%;
 }
