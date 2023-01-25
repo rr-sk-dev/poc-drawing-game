@@ -1,26 +1,24 @@
 import './style.css';
 
-import { User } from './users';
+// const playersElem = <HTMLDivElement>document.getElementById('players');
 
-const playersElem = <HTMLDivElement>document.getElementById('players');
+// const createUserUI = (user: User) => {
+//   console.log(user);
 
-const createUserUI = (user: User) => {
-  console.log(user);
+//   const playerElem = <HTMLDivElement>document.createElement('div');
+//   playerElem.classList.add('player');
 
-  const playerElem = <HTMLDivElement>document.createElement('div');
-  playerElem.classList.add('player');
+//   const idEmojiElem = <HTMLDivElement>document.createElement('div');
+//   playerElem.classList.add('id-emoji');
 
-  const idEmojiElem = <HTMLDivElement>document.createElement('div');
-  playerElem.classList.add('id-emoji');
+//   const idElem = <HTMLSpanElement>document.createElement('span');
+//   idElem.innerHTML = user.avatar;
 
-  const idElem = <HTMLSpanElement>document.createElement('span');
-  idElem.innerHTML = user.avatar;
+//   idEmojiElem.appendChild(idElem);
+//   playerElem.appendChild(idEmojiElem);
 
-  idEmojiElem.appendChild(idElem);
-  playerElem.appendChild(idEmojiElem);
-
-  playersElem.appendChild(playerElem);
-};
+//   playersElem.appendChild(playerElem);
+// };
 
 // users.forEach((user) => createUserUI(user));
 
