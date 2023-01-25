@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/ee914c97d9.js" crossorigin="anonymous"></script>
     <title>Vite + TS</title>
-    <script type="module" crossorigin src="/poc-drawing-game/assets/index-e2ad08e1.js"></script>
-    <link rel="stylesheet" href="/poc-drawing-game/assets/index-e71dd04d.css">
+    <script type="module" crossorigin src="/poc-drawing-game/assets/index-4bb9b1c2.js"></script>
+    <link rel="stylesheet" href="/poc-drawing-game/assets/index-008f668d.css">
   </head>
   <body>
     <header>
@@ -27,44 +27,198 @@
       <section class="flex-column">
         <canvas id="canvas"></canvas>
       </section>
-      <section class="tools">
-        <div class="clear-actions">
-          <span class="icon" id="undo-btn">
-            <i class="fa-solid fa-rotate-left"></i>
-          </span>
-          <span class="icon" id="clear-btn">
-            <!-- <i class="fa-solid fa-xmark"></i> -->
-            <i class="fa-solid fa-trash"></i>
-          </span>
-        </div>
-        <div class="flex-row color-field">
-          <div class="color red"></div>
-          <div class="color blue"></div>
-          <div class="color green"></div>
-          <div class="color yellow"></div>
-          <!-- <input type="color" class="color-picker" id="color-picker" /> -->
-          <label for="color-picker">
-            <!-- REPLACE DEFAULT INPUT BY ICON -->
-            <!-- <i class="fa fa-palette icon"></i> -->
-            <input type="color" id="color-picker" class="color-picker" />
-          </label>
-        </div>
 
-        <div class="draw-settings">
-          <input type="range" min="1" max="30" value="2" id="color-range" />
+      <section class="container">
+        <div class="tools">
+          <div class="clear-actions">
+            <span class="icon" id="undo-btn">
+              <i class="fa-solid fa-rotate-left"></i>
+            </span>
+            <span class="icon" id="clear-btn">
+              <!-- <i class="fa-solid fa-xmark"></i> -->
+              <i class="fa-solid fa-trash"></i>
+            </span>
+          </div>
+          <div class="color-field">
+            <div class="color red"></div>
+            <div class="color blue"></div>
+            <div class="color green"></div>
+            <div class="color yellow"></div>
+            <!-- <input type="color" class="color-picker" id="color-picker" /> -->
+            <label for="color-picker">
+              <!-- REPLACE DEFAULT INPUT BY ICON -->
+              <!-- <i class="fa fa-palette icon"></i> -->
+              <input type="color" id="color-picker" class="color-picker" />
+            </label>
+          </div>
+          <div class="draw-settings">
+            <input type="range" min="1" max="30" value="2" id="color-range" />
+          </div>
         </div>
-      </section>
-      <section class="flex-row social">
-        <div class="players">players</div>
-        <div class="chat">chat</div>
+        <div class="social-container">
+          <div class="players" id="players">
+            <!-- PLAYER 1 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#1</span>
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 2 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#2</span>
+                <i class="fa-solid fa-paint-roller"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 3 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#3</span>
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 4 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#4</span>
+                <i class="fa-solid fa-face-smile"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 1 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#1</span>
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 2 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#2</span>
+                <i class="fa-solid fa-paint-roller"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 3 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#3</span>
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 4 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#4</span>
+                <i class="fa-solid fa-face-smile"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 1 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#1</span>
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 2 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#2</span>
+                <i class="fa-solid fa-paint-roller"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 3 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#3</span>
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+            <!-- PLAYER 4 -->
+            <div class="player">
+              <div class="id-emoji">
+                <span>#4</span>
+                <i class="fa-solid fa-face-smile"></i>
+              </div>
+              <div class="name">
+                <span>name here</span>
+              </div>
+              <div class="score">
+                <span>0 points</span>
+              </div>
+            </div>
+          </div>
+          <div class="chat">chat</div>
+        </div>
       </section>
     </main>
 
     
   </body>
 </html>
-
-<!-- <i class="fa-solid fa-pen"></i> -->
-<!-- <i class="fa-solid fa-paint-roller"></i> -->
-<!-- <i class="fa-solid fa-palette"></i> -->
-<!-- <i class="fa-regular fa-pen-circle"></i> -->
