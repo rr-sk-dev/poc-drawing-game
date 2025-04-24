@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital@1&display=swap');
 
 :root {
   --header-default-height: 8%;
-  font-family: 'Shadows Into Light', cursive;
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Plus Jakarta Sans', serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -177,7 +179,7 @@ canvas {
   cursor: pointer;
 }
 
-input[type="range"] {
+input[type='range'] {
   cursor: pointer;
   width: 70%;
 }

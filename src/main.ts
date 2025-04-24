@@ -138,3 +138,37 @@ function clearCanvas() {
   restoreArr = [];
   index = -1;
 }
+
+const word = 'apple';
+let availableIndexes = Array.from(word, (_, idx) => (word[idx] !== ' ' ? idx : -1)).filter(
+  (idx) => idx !== -1
+);
+
+function createWordComponent() {
+  const wordElem = document.getElementById('word') as HTMLElement;
+  if (!wordElem) return;
+
+  // Initialize display with underscores while preserving spaces
+  let displayedWordArr: string[] = word.split('').map((char) => (char === ' ' ? ' ' : '_'));
+  wordElem.innerText = displayedWordArr.join(''); // FIX: Do not add extra spaces
+
+  let interval = setInterval(() => {
+    if (availableIndexes.length === 0) {
+      clearInterval(interval);
+      alert('Game over');
+      return;
+    }
+
+    // Pick a random index from availableIndexes and remove it
+    const randomIdx = Math.floor(Math.random() * availableIndexes.length);
+    const revealedIdx = availableIndexes.splice(randomIdx, 1)[0];
+
+    // Reveal the letter at the chosen index
+    displayedWordArr[revealedIdx] = word[revealedIdx];
+
+    // Update the display
+    wordElem.innerText = displayedWordArr.join(''); // FIX: Do not add extra spaces
+  }, 3000); // Every 3 seconds
+}
+
+setTimeout(createWordComponent, 1000 * 2);

@@ -5,12 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/ee914c97d9.js" crossorigin="anonymous"></script>
-    <title>Vite + TS</title>
+    <title>POC - Draw</title>
   </head>
   <body>
     <header>
       <div class="title">
-        <h1>Skribbl - v1</h1>
+        <h1>POC - v1</h1>
       </div>
       <div class="actions">
         <span class="icon">
@@ -20,7 +20,7 @@
     </header>
     <main>
       <section class="flex-column word">
-        <span>the word stays here</span>
+        <span id="word">the word stays here</span>
       </section>
       <section class="flex-column">
         <canvas id="canvas"></canvas>
@@ -29,11 +29,12 @@
       <section class="container">
         <div class="tools">
           <div class="clear-actions">
+            <!-- <span id="undo-btn"> Undo </span>
+            <span id="clear-btn"> Clear </span> -->
             <span class="icon" id="undo-btn">
               <i class="fa-solid fa-rotate-left"></i>
             </span>
             <span class="icon" id="clear-btn">
-              <!-- <i class="fa-solid fa-xmark"></i> -->
               <i class="fa-solid fa-trash"></i>
             </span>
           </div>
